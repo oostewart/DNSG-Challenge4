@@ -11,10 +11,10 @@ with open('JSONdata') as file:
 # Definite JSON value and iterates through the data file 'for'
 # Use 'try' error exception handling to validate the value "lanIP" using the import ipaddress module
 for value in data:
-    ip = value['lanIp']
+    ipv4 = value['lanIp']
     sn = value['serial']    
     try:
         ipaddress.IPv4Address(ip)
-        print(ip + ' is a valid IP address for Serial ' + sn)
+        print(ipv4 + ' is a valid IP address for Serial ' + sn)
     except ValueError:
-        print(ip + ' is NOT a valid IP address for Serial ' + sn)
+        print(ipv4 + ' is NOT a valid IP address for Serial ' + sn)
