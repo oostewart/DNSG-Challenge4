@@ -14,7 +14,7 @@ for value in data:
     ipv4 = value['lanIp']
     sn = value['serial']    
     try:
-        ipaddress.IPv4Address(ip)
+        ipaddress.IPv4Address(ipv4)
         print(ipv4 + ' is a valid IP address for Serial ' + sn)
     except ValueError:
         print(ipv4 + ' is NOT a valid IP address for Serial ' + sn)
